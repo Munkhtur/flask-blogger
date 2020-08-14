@@ -9,4 +9,3 @@ Flask_Bcrypt==0.7.1
 Pillow==7.2.0
 python-dotenv==0.14.0
 email-validator==1.1.1
-gunicorn = "*"
