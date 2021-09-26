@@ -17,7 +17,18 @@
             {% endif %}
         </div>
         <h2 class="article-title">{{ post.title }}</h2>
-        <p class="article-content">{{ post.content }}</p>
+        <p class="article-content">{{ post.content | safe }}</p>
+        <div class="d-flex container w-100">
+            <p class="text-muted m-0">Tags:</p>
+                {% for tag in post.tags %}
+                <button type="button" class="btn btn-link px-2 py-0">
+                    <a href="{{url_for('tags.tag_posts', tag_name= tag)}}">{{tag}}</a>
+                </button>
+
+                {% endfor %}
+ 
+        </div>
+
     </div>
 </article>
 
